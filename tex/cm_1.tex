@@ -11,9 +11,9 @@
 \usecolortheme{seahorse}
 }
 
-\title{Introductory Macroeconomics for Engineers}
-\author{Instructor Name}
-\date{Semester and Year}
+\title{Macroéconomie 1}
+\author{Mart\'in Valdez}
+\date{IE1}
 
 \begin{document}
 
@@ -41,18 +41,18 @@
 \begin{frame}
 \frametitle{Micro vs. Macro}
 \begin{itemize}
-    \item \textbf{Microeconomics}
-    The study of individual economic agents such as households and firms,
-    how they make decisions, and how they interact in individual markets.
+    \item \textbf{Microéconomie}
+    L'étude des agents économiques individuels tels que les ménages et les entreprises,
+    comment ils prennent des décisions, et comment ils interagissent dans les marchés individuels.
     \pause
-    \item \textbf{Macroeconomics}
-    The study of the economy as a whole, including aggregate measures such as
-    GDP, consumption, investment, inflation, and unemployment.
+    \item \textbf{Macroéconomie}
+    L'étude de l'économie dans son ensemble, incluant des mesures globales telles que
+    le PIB, la consommation, l'investissement, l'inflation et le chômage.
     \begin{itemize}
-        \item \textbf{Short-run:} Business cycles, recessions, and monetary and fiscal policy.
-        \item \textbf{Long-run:} Economic growth, productivity, and international trade.
+        \item \textbf{Short-run(Court terme) :} Cycles économiques, récessions, et politiques monétaires et fiscales.\pause
+        \item \textbf{Long-run(Long terme) :} Croissance économique, productivité et commerce international.
     \end{itemize}
-    \item \textbf{Why study macroeconomics?}
+    \item \textbf{Pourquoi étudier la macroéconomie ?}
 \end{itemize}
 \end{frame}
 
@@ -61,127 +61,94 @@
 %  History of Macroeconomics
 %------------------------------------------------
 \begin{frame}
-    \frametitle{History of Macroeconomics}
-    \framesubtitle{Pre-Lucas Critique: 1936-1976}
+    \frametitle{Histoire de la Macroéconomie}
+    \framesubtitle{Pré-critique de Lucas : 1936-1976}
         \begin{itemize}
-            \item John Maynard Keynes's seminal book in 1936  \enquote{The General Theory of Employment, Interest, and Money}
-            \item \textbf{Keynesian Economics:} Advocated for government intervention to stabilize the economy.
-            \item \textbf{Limitations:} Based on aggregate relationships such as the Phillips Curve,
-            an inverse relationship between inflation and unemployment \parencite{Phillips_1958}.
-            \item Broke down in the 1970s due to stagflation, a combination of high inflation and high unemployment,
-            which was unexplained by Keynesian models.
+            \item Le livre fondateur de John Maynard Keynes en 1936, \enquote{Théorie générale de l'emploi, de l'intérêt et de la monnaie}
+            \item \textbf{Économie keynésienne :} Prône l'intervention gouvernementale pour stabiliser l'économie.
+            \item \textbf{Limitations :} Basée sur des relations agrégées telles que la courbe de Phillips,
+            une relation inverse entre l'inflation et le chômage \parencite{Phillips_1958}.
+            \item Échec dans les années 1970 en raison de la stagflation, une combinaison d'inflation élevée et de chômage élevé,
+            qui n'était pas expliquée par les modèles keynésiens.
         \end{itemize}
     \end{frame}
     \begin{frame}
-        \frametitle{History of Macroeconomics}
-        \framesubtitle{Post-Lucas Critique: 1976-Present}
-            \begin{itemize}
-                \item \textbf{Robert Lucas's critique in 1976:} Micro-foundations are essential for macroeconomic models! \parencite{Lucas_1976}.
-                \item Led to development of modern macro, starting with Real Business Cycle \textcite{Kydland_Prescott_1982}.
-                \item \textbf{Key Insights:} Expectations, rationality and shocks.
-                \item \textbf{New Keynesian Economics:} Incorporates sticky prices and wages into models: DSGE models.
-            \end{itemize}
-        \end{frame}
-                    
+        \frametitle{Histoire de la Macroéconomie}
+        \framesubtitle{Post-critique de Lucas : 1976-Présent}
+                \begin{itemize}
+                    \item \textbf{La critique de Robert Lucas en 1976 :} Les micro-fondations sont essentielles pour les modèles macroéconomiques ! \parencite{Lucas_1976}.
+                    \item A conduit au développement de la macroéconomie moderne, à commencer par la théorie du cycle économique réel \textcite{Kydland_Prescott_1982}.
+                    \item \textbf{Principales réflexions :} Les attentes, la rationalité et les chocs.
+                    \item \textbf{Économie néo-keynésienne :} Intègre les prix et les salaires rigides dans les modèles : modèles \textbf{DSGE}.
+                \end{itemize}
+    \end{frame}
+                        
 %------------------------------------------------
 %  Economic Models
 %------------------------------------------------
 \begin{frame}
-    \frametitle{Understanding Economic Models}
-    \framesubtitle{What is a Model?}
+    \frametitle{Les Modèles Économiques}
+    \framesubtitle{Qu'est-ce qu'un Modèle ?}
         \begin{itemize}
-            \item A model is a \textbf{simplified representation} of a complex reality.
-            \item Models help us understand, explain, and predict economic phenomena with a clear framework.
-            \item \textbf{Purpose:} To abstract the complex real-world into manageable parts.
+            \item Un modèle est une \textbf{représentation simplifiée} d'une réalité complexe.
+            \item Les modèles nous aident à comprendre, expliquer et prédire les phénomènes économiques avec un cadre clair.
+            \item \textbf{Objectif :} Abstraire le monde réel complexe en parties gérables.
         \end{itemize}
     \end{frame}
-
     \begin{frame}
-        \frametitle{Understanding Economic Models}
-        \framesubtitle{Why Use Models?}
-            \begin{itemize}
-                \item \textbf{Conducting Experiments:} Models allow economists to conduct experiments that are not feasible in the real world.
-                \item \textbf{Informing Policy:} Results from these experiments can guide policy-making decisions.
-                \item \textbf{Exploratory Tools:} They help in exploring the outcomes of different economic scenarios and policies.
-            \end{itemize}
-        \end{frame}
-        
-        \begin{frame}
-            \frametitle{Understanding Economic Models}
-            \framesubtitle{Testing Model Usefulness}
-                \begin{itemize}
-                    \item A model designed to explain phenomenon \textit{x} can be tested by its ability to explain \textit{y}, a related but untargeted phenomenon.
-                    \item \textbf{Test of Usefulness:} Whether it can illuminate aspects it was not specifically designed to explain.
-                    \item A model's inability to explain every aspect of reality is not necessarily a drawback.
-                    \item \textbf{ All models are wrong, but some are useful.}
-                    \item The best models are those that offer the greatest clarity and predictive power while acknowledging their limitations.
-                    \end{itemize}
-                \end{frame}
+        \frametitle{Les Modèles Économiques}
+        \framesubtitle{Pourquoi Utiliser des Modèles ?}
+        \begin{itemize}
+            \item \textbf{Réalisation d'expériences:} Les modèles permettent aux économistes de conduire des expériences qui ne sont pas réalisables dans le monde réel.
+            \item \textbf{Orientation des politiques :} Les résultats de ces expériences peuvent guider les décisions en matière de politique économique.
+            \item \textbf{Outils exploratoires :} Ils aident à explorer les résultats de différents scénarios et politiques économiques.
+            \item \textbf{Tous les modèles sont faux, mais certains sont utiles.}
+            \item Les meilleurs modèles sont ceux qui offrent la plus grande clarté et puissance prédictive tout en reconnaissant leurs limites.
+        \end{itemize}
+    \end{frame}
+    
 %------------------------------------------------
 %  GDP
 %------------------------------------------------
 \begin{frame}
-    \frametitle{Basic Concepts}
-    \framesubtitle{GDP - Overview}
+    \frametitle{PIB}
+    \framesubtitle{Définition et Composants}
         \begin{itemize}
-            \item \textbf{GDP (Gross Domestic Product)} measures the total value of all final goods and services produced within a country during a specific period.
-            \item \textbf{Goods and Services:} "Goods" are tangible like shirts; "Services" are intangible like education.
-            \item \textbf{Final Goods:} Only considers goods and services sold to end-users, excludes intermediate goods to avoid double counting.
-            \item \textbf{Current Prices:} Values are based on prices during the period being measured.
-            \item \textbf{Exclusions:} Does not account for home labor,  or illegal activities.
+            \item \textbf{PIB (Produit Intérieur Brut)} est la valeur marchande totale de tous les biens et services finaux produits à l'intérieur d'un pays pendant une période donnée.
+            \item \textbf{Composants:}
+                \begin{itemize}
+                    \item \textbf{Consommation (C)} : Dépenses des ménages en biens et services.
+                    \item \textbf{Investissement (I)} : Dépenses en biens de capital par les entreprises et les ménages.
+                    \item \textbf{Dépenses Gouvernementales (G)} : Dépenses en biens et services par le gouvernement.
+                    \item \textbf{Exportations Nettes (NX)} : Exportations moins importations.
+                \end{itemize}
         \end{itemize}
-    \end{frame}
-    
-    \begin{frame}
-        \frametitle{Basic Concepts}
-        \framesubtitle{GDP - Expenditure vs Income Approach}
-            \begin{itemize}
-                \item GDP calculated as the sum of Consumption (C), Investment (I), Government Expenditures (G), and Net Exports (NX).
-                \item \textbf{Net Exports (NX)} = Exports (X) - Imports (IM).
-                \item \textbf{Why subtract imports?} We exclude imports because they are products produced outside the domestic economy.
-                \item \textbf{Formula:} $GDP_t = C_t + I_t + G_t + (X_t - IM_t)$
-            \end{itemize}
-        \end{frame}
-
-        \begin{frame}
-            \frametitle{Basic Concepts}
-            \framesubtitle{GDP - Income Approach}
-                \begin{itemize}
-                    \item The income approach calculates GDP by summing all incomes earned in the production of goods and services.
-                    \item \textbf{Components:} Includes wages (labor income), rents (income from property), interest (income from capital), and profits (corporate earnings).
-                    \item \textbf{Formula:} $GDP = \text{wages} + \text{rents} + \text{interest} + \text{profits} + \text{taxes on production and imports} - \text{subsidies}$
-                    \item This method mirrors the expenditure approach as every dollar spent in an economy is a dollar income to someone else.
-                    \item \textbf{Key Insight:} Helps in understanding the distribution of income in the economy, showing how much income is generated from various economic activities.
-                \end{itemize}
-            \end{frame}
-            
-        
-        \begin{frame}
-            \frametitle{Basic Concepts}
-            \framesubtitle{Real vs. Nominal GDP}
-                \begin{itemize}
-                    \item \textbf{Nominal GDP:} Measured in current prices, reflects price and quantity changes.
-                    \item \textbf{Real GDP:} Adjusted for price changes, provides a clearer measure of economic performance.
-                    \item \textbf{Example:} If 10 units of a good are produced at a price of \$1.50 each, Nominal GDP is \$15.00.
-                    \item \textbf{Calculating Real GDP:} Real GDP = $\frac{\text{Nominal GDP}}{\text{Price Level}}$ focuses on quantity only.
-                \end{itemize}
-            \end{frame}
-            
-\section{Economic Growth}
-\begin{frame}
-\frametitle{Kaldor's Stylized Facts}
-\begin{itemize}
-    \item Kaldor's stylized facts are a set of empirical regularities observed in economic growth.
-    \item They were identified by economist Nicholas Kaldor in the 1950s and 1960s.
-    \item These facts provide insights into the patterns and characteristics of economic growth.
-    \item The stylized facts include:
-    \begin{itemize}
-        \item High and sustained rates of economic growth are possible.
-        \item Economic growth is uneven across countries and regions.
-        \item The distribution of income becomes more unequal during the early stages of economic growth.
-        \item The share of labor income in national income tends to decline over time.
-        \item The share of investment in national income tends to increase over time.
-    \end{itemize}
-\end{itemize}
 \end{frame}
+                
+\begin{frame}
+    \frametitle{PIB}
+    \framesubtitle{Méthodes de Mesure}
+        \begin{itemize}
+            \item \textbf{Approche par la dépense :} Somme de toutes les dépenses effectuées dans l'économie :
+                \begin{equation}
+                PIB = C + I + G + (X - IM)
+                \end{equation}
+            \item \textbf{Approche du revenu :} Somme de tous les revenus perçus dans l'économie :
+                \begin{equation}
+                PIB = \text{Salaires} + \text{Loyers} + \text{Intérêts} + \text{Profits} + \text{Taxes} - \text{Subventions}
+                \end{equation}
+        \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Kaldor's Stylized Facts}
+    \framesubtitle{Aperçus Clés sur la Croissance Économique}
+        \begin{itemize}
+            \item \textbf{Croissance de la Production :} La production par travailleur et la production totale ont augmenté de manière constante au fil du temps.
+            \item \textbf{Accumulation de Capital :} Le stock de capital par travailleur augmente; cependant, le ratio capital-production reste relativement stable.
+            \item \textbf{Taux de Rendement :} Le taux de rendement sur l'investissement reste stable malgré les augmentations significatives du stock de capital.
+            \item \textbf{Répartition du Revenu :} Les parts du revenu national attribuées au travail et au capital restent relativement stables sur de longues périodes.
+        \end{itemize}
+\end{frame}
+    
 \end{document}
