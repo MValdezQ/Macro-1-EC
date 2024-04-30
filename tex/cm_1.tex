@@ -1,4 +1,10 @@
 \documentclass{beamer}
+% Load csquotes for the \enquote command
+\usepackage{csquotes}
+
+% Load biblatex for bibliography management
+\usepackage[backend=biber, style=authoryear]{biblatex}
+\addbibresource{bibliography.bib} % Specify your BibTeX bibliography file
 
 \mode<presentation> {
 \usetheme{CambridgeUS}
@@ -35,56 +41,48 @@
 \begin{frame}
 \frametitle{Micro vs. Macro}
 \begin{itemize}
-    \item Microeconomics
+    \item \textbf{Microeconomics}
     The study of individual economic agents such as households and firms,
     how they make decisions, and how they interact in individual markets.
     \pause
-    \item Macroeconomics
+    \item \textbf{Macroeconomics}
     The study of the economy as a whole, including aggregate measures such as
     GDP, consumption, investment, inflation, and unemployment.
-    Short-run: Business cycles, recessions, and monetary and fiscal policy.
-    Long-run: Economic growth, productivity, and international trade. \pause
+    \begin{itemize}
+        \item \textbf{Short-run:} Business cycles, recessions, and monetary and fiscal policy.
+        \item \textbf{Long-run:} Economic growth, productivity, and international trade.
+    \end{itemize}
     \item \textbf{Why study macroeconomics?}
 \end{itemize}
 \end{frame}
 
+
 %------------------------------------------------
-%  GDP
+%  History of Macroeconomics
 %------------------------------------------------
 \begin{frame}
-    \frametitle{Basic Concepts}
-    \framesubtitle{GDP - Overview}
+    \frametitle{History of Macroeconomics}
+    \framesubtitle{Pre-Lucas Critique: 1936-1976}
         \begin{itemize}
-            \item \textbf{GDP (Gross Domestic Product)} measures the total value of all final goods and services produced within a country during a specific period.
-            \item \textbf{Goods and Services:} "Goods" are tangible like shirts; "Services" are intangible like education.
-            \item \textbf{Final Goods:} Only considers goods and services sold to end-users, excludes intermediate goods to avoid double counting.
-            \item \textbf{Current Prices:} Values are based on prices during the period being measured.
-            \item \textbf{Exclusions:} Does not account for home labor,  or illegal activities.
+            \item John Maynard Keynes's seminal book in 1936  \enquote{The General Theory of Employment, Interest, and Money}
+            \item \textbf{Keynesian Economics:} Advocated for government intervention to stabilize the economy.
+            \item \textbf{Limitations:} Based on aggregate relationships such as the Phillips Curve,
+            an inverse relationship between inflation and unemployment \parencite{Phillips_1958}.
+            \item Broke down in the 1970s due to stagflation, a combination of high inflation and high unemployment,
+            which was unexplained by Keynesian models.
         \end{itemize}
     \end{frame}
-    
     \begin{frame}
-        \frametitle{Basic Concepts}
-        \framesubtitle{GDP - Expenditure Approach}
+        \frametitle{History of Macroeconomics}
+        \framesubtitle{Post-Lucas Critique: 1976-Present}
             \begin{itemize}
-                \item GDP calculated as the sum of Consumption (C), Investment (I), Government Expenditures (G), and Net Exports (NX).
-                \item \textbf{Net Exports (NX)} = Exports (X) - Imports (IM).
-                \item \textbf{Why subtract imports?} We exclude imports because they are products produced outside the domestic economy.
-                \item \textbf{Formula:} $GDP_t = C_t + I_t + G_t + (X_t - IM_t)$
+                \item \textbf{Robert Lucas's critique in 1976:} Micro-foundations are essential for macroeconomic models! \parencite{Lucas_1976}.
+                \item Led to development of modern macro, starting with Real Business Cycle \textcite{Kydland_Prescott_1982}.
+                \item \textbf{Key Insights:} Expectations, rationality and shocks.
+                \item \textbf{New Keynesian Economics:} Incorporates sticky prices and wages into models: DSGE models.
             \end{itemize}
         \end{frame}
-        
-        \begin{frame}
-            \frametitle{Basic Concepts}
-            \framesubtitle{Real vs. Nominal GDP}
-                \begin{itemize}
-                    \item \textbf{Nominal GDP:} Measured in current prices, reflects price and quantity changes.
-                    \item \textbf{Real GDP:} Adjusted for price changes, provides a clearer measure of economic performance.
-                    \item \textbf{Example:} If 10 units of a good are produced at a price of \$1.50 each, Nominal GDP is \$15.00.
-                    \item \textbf{Calculating Real GDP:} Real GDP = $\frac{\text{Nominal GDP}}{\text{Price Level}}$ focuses on quantity only.
-                \end{itemize}
-            \end{frame}
-            
+                    
 %------------------------------------------------
 %  Economic Models
 %------------------------------------------------
@@ -115,63 +113,75 @@
                     \item A model designed to explain phenomenon \textit{x} can be tested by its ability to explain \textit{y}, a related but untargeted phenomenon.
                     \item \textbf{Test of Usefulness:} Whether it can illuminate aspects it was not specifically designed to explain.
                     \item A model's inability to explain every aspect of reality is not necessarily a drawback.
-                \end{itemize}
-            \end{frame}
-
-            \begin{frame}
-                \frametitle{Understanding Economic Models}
-                \framesubtitle{All Models are Wrong, But Some are Useful}
-                    \begin{itemize}
-                        \item \textbf{Famous Adage:} All models are wrong, but some are useful.
-                        \item This phrase emphasizes that while no model can capture all aspects of reality, many provide significant insights and practical value.
-                        \item \textbf{Utility:} The best models are those that offer the greatest clarity and predictive power while acknowledging their limitations.
+                    \item \textbf{ All models are wrong, but some are useful.}
+                    \item The best models are those that offer the greatest clarity and predictive power while acknowledging their limitations.
                     \end{itemize}
                 \end{frame}
-
 %------------------------------------------------
-%  History of Macroeconomics
+%  GDP
 %------------------------------------------------
 \begin{frame}
-    \frametitle{History of Macroeconomics}
-    \framesubtitle{The Early Period: 1936-1968}
+    \frametitle{Basic Concepts}
+    \framesubtitle{GDP - Overview}
         \begin{itemize}
-            \item John Maynard Keynes published his seminal book during the Great Depression in 1936, sparking vast debates on his theories.
-            \item John Hicks offered a graphical interpretation in 1937, popularizing Keynesian economic models for policy.
-            \item Advancements in computational power in the 1950s allowed for the creation of complex statistical models by economists like Lawrence Klein, focusing on forecasting economic trends.
-            \item The Klein and Goldberger model (1955) integrated dozens of equations, enabling dynamic predictions of economic responses to shocks.
+            \item \textbf{GDP (Gross Domestic Product)} measures the total value of all final goods and services produced within a country during a specific period.
+            \item \textbf{Goods and Services:} "Goods" are tangible like shirts; "Services" are intangible like education.
+            \item \textbf{Final Goods:} Only considers goods and services sold to end-users, excludes intermediate goods to avoid double counting.
+            \item \textbf{Current Prices:} Values are based on prices during the period being measured.
+            \item \textbf{Exclusions:} Does not account for home labor,  or illegal activities.
         \end{itemize}
     \end{frame}
     
     \begin{frame}
-        \frametitle{History of Macroeconomics}
-        \framesubtitle{The Phillips Curve and its Implications}
+        \frametitle{Basic Concepts}
+        \framesubtitle{GDP - Expenditure vs Income Approach}
             \begin{itemize}
-                \item The Phillips Curve, introduced in 1958, illustrated a robust inverse relationship between inflation and unemployment rates.
-                \item This relationship suggested that policymakers could manipulate monetary and fiscal policies to target specific inflation and unemployment rates.
-                \item Milton Friedman critiqued this in 1968, arguing that such manipulation could lead to an inflationary spiral, challenging the sustainability of the Phillips Curve.
+                \item GDP calculated as the sum of Consumption (C), Investment (I), Government Expenditures (G), and Net Exports (NX).
+                \item \textbf{Net Exports (NX)} = Exports (X) - Imports (IM).
+                \item \textbf{Why subtract imports?} We exclude imports because they are products produced outside the domestic economy.
+                \item \textbf{Formula:} $GDP_t = C_t + I_t + G_t + (X_t - IM_t)$
             \end{itemize}
         \end{frame}
-                        
+
         \begin{frame}
-            \frametitle{History of Macroeconomics}
-            \framesubtitle{Breakdown Era: 1968-1981}
+            \frametitle{Basic Concepts}
+            \framesubtitle{GDP - Income Approach}
                 \begin{itemize}
-                    \item The era highlighted the lack of microeconomic foundations in early Keynesian models.
-                    \item Robert Lucas's critique (1976) emphasized that models based on ad hoc macroeconomic relationships fail under policy changes due to the rational expectations of agents.
-                    \item This period saw the dismissal of simplistic Keynesian models, influenced further by economic stagnation during the 1970s.
+                    \item The income approach calculates GDP by summing all incomes earned in the production of goods and services.
+                    \item \textbf{Components:} Includes wages (labor income), rents (income from property), interest (income from capital), and profits (corporate earnings).
+                    \item \textbf{Formula:} $GDP = \text{wages} + \text{rents} + \text{interest} + \text{profits} + \text{taxes on production and imports} - \text{subsidies}$
+                    \item This method mirrors the expenditure approach as every dollar spent in an economy is a dollar income to someone else.
+                    \item \textbf{Key Insight:} Helps in understanding the distribution of income in the economy, showing how much income is generated from various economic activities.
                 \end{itemize}
             \end{frame}
             
-            \begin{frame}
-                \frametitle{History of Macroeconomics}
-                \framesubtitle{Modern Macroeconomics: 1982-Present}
-                    \begin{itemize}
-                        \item Introduction of Real Business Cycle theory by Kydland and Prescott in 1982, integrating microeconomic behaviors into macro models.
-                        \item Their model demonstrated how random technology shocks could drive business cycles, challenging earlier Keynesian views.
-                        \item Development of DSGE models that integrate rational expectations, optimizing behaviors, and acknowledge various market frictions.
-                        \item Current models blend insights from Keynesian approaches with new microeconomic foundations, shaping modern macroeconomic policy tools.
-                    \end{itemize}
+        
+        \begin{frame}
+            \frametitle{Basic Concepts}
+            \framesubtitle{Real vs. Nominal GDP}
+                \begin{itemize}
+                    \item \textbf{Nominal GDP:} Measured in current prices, reflects price and quantity changes.
+                    \item \textbf{Real GDP:} Adjusted for price changes, provides a clearer measure of economic performance.
+                    \item \textbf{Example:} If 10 units of a good are produced at a price of \$1.50 each, Nominal GDP is \$15.00.
+                    \item \textbf{Calculating Real GDP:} Real GDP = $\frac{\text{Nominal GDP}}{\text{Price Level}}$ focuses on quantity only.
+                \end{itemize}
             \end{frame}
-                
-
+            
+\section{Economic Growth}
+\begin{frame}
+\frametitle{Kaldor's Stylized Facts}
+\begin{itemize}
+    \item Kaldor's stylized facts are a set of empirical regularities observed in economic growth.
+    \item They were identified by economist Nicholas Kaldor in the 1950s and 1960s.
+    \item These facts provide insights into the patterns and characteristics of economic growth.
+    \item The stylized facts include:
+    \begin{itemize}
+        \item High and sustained rates of economic growth are possible.
+        \item Economic growth is uneven across countries and regions.
+        \item The distribution of income becomes more unequal during the early stages of economic growth.
+        \item The share of labor income in national income tends to decline over time.
+        \item The share of investment in national income tends to increase over time.
+    \end{itemize}
+\end{itemize}
+\end{frame}
 \end{document}
