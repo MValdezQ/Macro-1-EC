@@ -21,22 +21,34 @@
 \titlepage
 \end{frame}
 
-\begin{frame}
-\frametitle{Overview}
-\tableofcontents
-\end{frame}
+% \begin{frame}
+% \frametitle{Overview}
+% \tableofcontents
+% \end{frame}
 
-% Slide Template
+% ------------------------------------------------
+%  Introduction
+% ------------------------------------------------
+
 \section{Introduction}
 \begin{frame}
-\frametitle{Introduction}
-\begin{itemize}
-    \item Course Overview
-    \item Objectives
-    \item Grading
-\end{itemize}
+    \frametitle{Introduction}
+    \begin{itemize}
+        \item Aperçu du cours
+        \begin{itemize}
+            \item Introduction à la macroéconomie
+            \item Concepts, modèles et données macroéconomiques
+            \item Croissance économique
+            \item Consommation
+            \item (Peut-être) Modèle de croissance néoclassique
+        \end{itemize}
+        \item Objectifs : Découvrir la macroéconomie, peut-être que cela vous plaira !
+        \item Évaluation : À discuter.
+    \end{itemize}
 \end{frame}
-
+%------------------------------------------------
+%  Economic Concepts
+%------------------------------------------------
 \section{Economic Concepts}
 \begin{frame}
 \frametitle{Micro vs. Macro}
@@ -72,6 +84,7 @@
 %------------------------------------------------
 %  History of Macroeconomics
 %------------------------------------------------
+\section{History of Macroeconomics}
 \begin{frame}
     \frametitle{Histoire de la Macroéconomie}
     \framesubtitle{Pré-critique de Lucas : 1936-1976}
@@ -267,14 +280,148 @@
             montre une remarquable stabilité malgré les fluctuations 
             économiques.
             \hyperlink{capital_output_ratio}{\beamergotobutton{Graphique}}
+        \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Kaldor's Stylized Facts}
+    \hypertarget{kaldor}{} % Label for hyperlinks
+    \framesubtitle{Aperçus Clés sur la Croissance Économique}
+        \begin{itemize}
             \item \textbf{Répartition du Revenu:} 
             Les parts du revenu national attribuées au travail et au capital 
             restent relativement stables sur de longues périodes.
             \hyperlink{income}{\beamergotobutton{Graphique}}
             \item \textbf{Taux de Rendement:} Le taux de rendement sur l'investissement reste stable malgré les augmentations significatives du stock de capital.
             \hyperlink{return}{\beamergotobutton{Graphique}}
+            \item \textbf{Croissance des Salaires:} 
+            Les salaires réels augmentent de manière constante au fil du temps.
+            \hyperlink{wages}{\beamergotobutton{Graphique}}
         \end{itemize}
 \end{frame}
+
+%-------------------------------------------------
+%  First Macro Model: Solow Growth Model
+%-------------------------------------------------
+
+\begin{frame}
+    \frametitle{Solow Model}
+    \framesubtitle{Introduction}
+    \begin{itemize}
+        \item The Solow Model \parencite{Solow_1956} is used to study long-run economic growth and 
+        variations in income across countries.\pause
+        \item \textbf{Main Implication:} 
+        Productivity is \textbf{crucial} for sustained economic growth and is 
+        \textbf{more} significant than factor accumulation.\pause
+        \item \textbf{Main Drawbacks:}
+        \begin{itemize}
+            \item Productivity is considered exogenous.
+            \item Consumption is assumed to be constant.
+            \item It oversimplifies by ignoring factors like 
+            human capital, technological progress, market imperfections, 
+            diversity of agents, government roles, etc.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solow Model}
+    \framesubtitle{Overview}
+    \begin{itemize}
+        \item Time runs from \( t \) (the present) onwards into the infinite future.
+        \item Models a representative household and a representative firm.
+        \item Considers a single good which represents everything real in the economy.\pause
+        \item \textbf{Production Function:} \( Y_t = A_t F(K_t, N_t) \)
+        \begin{itemize}
+            \item \( K_t \): capital, which is produced, used to make other goods, and does not completely depreciate.
+            \item \( N_t \): labor, representing time spent using machines to produce goods.
+            \item \( Y_t \): output, which can be thought of as units of food.
+            \item \( A_t \): productivity (exogenous), affects the effectiveness of capital and labor.
+        \end{itemize}
+        \pause
+        \item 
+        Conceptualize output as \enquote{fruit}, capital stock as \enquote*{fruit trees} 
+        and labor as time spent cultivating the trees.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solow Model}
+    \framesubtitle{Production Function}
+    \begin{itemize}
+        \item Both inputs are necessary: \( F(0, N_t) = F(K_t, 0) = 0 \).
+        \item Increasing in both inputs: \( F_K(K_t, N_t) > 0 \) and \( F_N(K_t, N_t) > 0 \).
+        \item Concave in both inputs: \( F_{KK}(K_t, N_t) < 0 \) and \( F_{NN}(K_t, N_t) < 0 \).
+        \item Constant returns to scale: \( F(qK_t, qN_t) = qF(K_t, N_t) \).
+        \item Capital and labor are paid their marginal products
+        \begin{itemize}
+            \item \( w_t = A_t F_N(K_t, N_t) \) (wage rate)
+            \item \( R_t = A_t F_K(K_t, N_t) \) (return on capital)
+        \end{itemize}
+        (why?)\pause
+        \item Example production function: Cobb-Douglas
+        \[ F(K_t, N_t) = K_t^\alpha N_t^{1-\alpha}, \quad 0 < \alpha < 1 \]
+        \item Is the production function realistic? No! \parencite{Banerjee_2005}.
+        So why do we use it? 
+        
+    \end{itemize}
+\end{frame}
+\begin{frame}
+    \frametitle{Solow Model}
+    \framesubtitle{Consumption and Investment}
+    \begin{itemize}
+        \item Fruit can either be eaten (consumption) or re-planted in the ground (investment), 
+        which then yields another tree (capital) with a one-period delay.
+        \item Assume that a constant fraction of output, 
+        \( 0 \leq s \leq 1 \), is invested. 
+        This is the "saving rate" or "investment rate." 
+        (More on this later!)
+        \pause
+        \item \textbf{Resource Constraint:} \( Y_t = C_t + I_t \)
+        (\enquote{Closing the model})\pause
+        \item Capital accumulation equation with depreciation rate \( 0 < \delta < 1 \):
+        \[ K_{t+1} = I_t + (1 - \delta)K_t \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solow Model}
+    \framesubtitle{Central Equation and Dynamics}
+    \begin{itemize}
+        \item Simplified equations:
+        \begin{align*}
+            Y_t &= A_t F(K_t, N_t) \\
+            C_t &= (1 - s)Y_t \\
+            I_t &= sY_t \\
+            w_t &= A_t F_N(K_t, N_t) \\
+            R_t &= A_t F_K(K_t, N_t)
+        \end{align*}
+        \item Combine the first four equations into one central dynamic equation
+        \pause
+        \[ K_{t+1} = sA_t F(K_t, N_t) + (1 - \delta)K_t \]
+        \item Define per worker variables: \( k_t = \frac{K_t}{N_t} \)
+        \item Per-worker dynamics: \( k_{t+1} = sA_t f(k_t) + (1 - \delta)k_t \)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Solow Model}
+    \framesubtitle{The Steady State}
+    \begin{itemize}
+        \item The steady state capital stock, \( k^* \), is where \( k_{t+1} = k_t \).
+        \item Graphically, this is where the curve of \( k_{t+1} \) against \( k_t \) crosses the 45-degree line.
+        \item Under the assumptions of the production function and Inada conditions, there exists one non-zero steady state capital stock.
+        \item Stability: For any initial \( k_t \neq 0 \), the capital stock converges to this point.
+        \item Implications: Once capital reaches \( k^* \), all other variables also stabilize to their steady state values, governed by \( k^* \).
+        \item Example with Cobb-Douglas: \( f(k_t) = k_t^\alpha \)
+    \end{itemize}
+\end{frame}
+
+
+%-------------------------------------------------
+%  Graphs
+%-------------------------------------------------
+
 
 
 \begin{frame}
@@ -334,10 +481,23 @@
         \begin{figure}
             \centering
             \includegraphics[width=0.6\textwidth]{graphs/r_usa.png}
-            \caption{Return on Investment, US Economy}
+            \caption{Return on Investment, US Economy
+            \hyperlink{kaldor}{\beamergotobutton{Retour}}}
         \end{figure}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Kaldor's Stylized Facts}
+    \hypertarget{wages}{} % Label for hyperlinks
+    \framesubtitle{Wage Growth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.6\textwidth]{graphs/lnwages_usa.png}
+            \caption{Real wages, US Economy
+            \hyperlink{kaldor}{\beamergotobutton{Retour}}}
+
+        \end{figure}
+\end{frame}
 
 % \begin{frame}
 %     \frametitle{Kaldor's Stylized Facts}
