@@ -1,7 +1,8 @@
 \documentclass[11pt]{article}
 \usepackage{geometry}
 \geometry{letterpaper}
-
+\usepackage{amsmath} % for mathematical features
+\usepackage{enumitem} % for customizing lists
 \title{Introductory Macroeconomics for Engineers}
 \author{Martin A. Valdez}
 \date{IE 1}
@@ -9,13 +10,67 @@
 \begin{document}
 \maketitle
 
-\section{TD 1}
-\subsection{Question 1}
+\section*{TD Macro 1}
 
+\subsection*{Exercice 1}
+Exprimez les équations suivantes sous forme log-linéaire, c'est-à-dire prenez les logarithmes et simplifiez :
+\begin{enumerate}
+    \item[(a)] \(Y = zK^\alpha N^{1-\alpha}\).
+    \item[(b)] \(Z = ce^{rt^\beta K}\).
+\end{enumerate}
+
+\subsection*{Exercice 2}
+Calculez les premières et secondes dérivées des fonctions suivantes :
+\begin{enumerate}
+    \item[(a)] \(f(c) = \ln(c)\).
+    \item[(b)] \(u(c) = \frac{c^{1-\sigma}}{1-\sigma}\).
+    \item[(c)] \(h(w) = (-6w^3 + 17w - 4)^\beta - \ln(\theta w^\beta)\).
+\end{enumerate}
+
+\subsection*{Exercice 3}
+Calculez toutes les premières, secondes et dérivées croisées des fonctions suivantes :
+\begin{enumerate}
+    \item[(a)] \(F(K, N) = \theta K^\alpha N^{1-\alpha}\).
+    \item[(b)] \(F(K, N) = \ln \theta + \alpha \ln K + (1 - \alpha) \ln N\).
+\end{enumerate}
+
+\subsection*{Exercice 4}
+Résolvez le problème de maximisation suivant sous contrainte.
+\[
+\max_{x,w} U = \alpha \ln(x) + \beta \ln(w) 
+\]
+sous la contrainte
+\begin{align*}
+    &p_x x + p_w w \leq y \\
+    &\alpha + \beta = 1.
+\end{align*}
+
+\subsection*{Exercice 5}
+Considérez la fonction \( f(x) = \ln(1+x) \). 
+Calculez le Taylor expansion du premier ordre de \( f(x) \) autour du point \( x = 0 \).
+Montrez que le taux de croissance peut être approché par le  Taylor expansion du premier 
+ordre de la fonction logarithme autour du point 1, quand \( x \) est petit.
+
+\subsubsection*{Note sur Taylor expansions du premier ordre}
+Le Taylor expansion du premier ordre d'une fonction \( f(x) \) autour d'un point \( a \) fournit une approximation linéaire de \( f(x) \) près de \( a \). 
+Il est donné par :
+\[
+f(x) \big|_{x=a} \approx f(a) + f'(a)(x - a),
+\]
+où \( f'(a) \) est la dérivée de \( f \) en \( a \).
+
+\subsection*{Exercice 6}
+Supposez qu'une économie produit de l'acier, du blé et du pétrole. Voici les activités économiques de chaque industrie :
 \begin{itemize}
-\item \textbf{What is the difference between microeconomics and macroeconomics?}
+    \item L'industrie de l'acier produit 100 000 \$ de revenus, dépense 4 000 \$ en pétrole, 10 000 \$ en blé et paie 80 000 \$ aux travailleurs.
+    \item L'industrie du blé produit 150 000 \$ de revenus, dépense 20 000 \$ en pétrole, 10 000 \$ en acier et paie 90 000 \$ aux travailleurs.
+    \item L'industrie du pétrole produit 200 000 \$ de revenus, dépense 40 000 \$ en blé, 30 000 \$ en acier et paie 100 000 \$ aux travailleurs.
 \end{itemize}
-
+Il n'y a ni gouvernement, ni exportations, ni importations. Aucune des industries n'accumule ni ne déstocke des inventaires.
+\begin{enumerate}
+    \item Calculez le PIB de cette économie en utilisant la méthode de production.
+    \item Calculez le PIB en utilisant la méthode du revenu.
+\end{enumerate}
 
 
 \end{document}

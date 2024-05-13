@@ -1,0 +1,152 @@
+\documentclass{beamer}
+% Load csquotes for the \enquote command
+\usepackage{csquotes}
+\usepackage{hyperref}
+% Load biblatex for bibliography management
+\usepackage[backend=biber, style=authoryear]{biblatex}
+\addbibresource{bibliography.bib} % Specify your BibTeX bibliography file
+
+\mode<presentation> {
+\usetheme{CambridgeUS}
+\usecolortheme{seahorse}
+}
+
+\title{Macroéconomie 1}
+\author{Mart\'in Valdez}
+\date{IE1}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+% \begin{frame}
+% \frametitle{Overview}
+% \tableofcontents
+% \end{frame}
+
+% ------------------------------------------------
+%  Introduction
+% ------------------------------------------------
+\section{Modèle de Solow}
+%-------------------------------------------------
+%  First Macro Model: Solow Growth Model
+%-------------------------------------------------
+
+\begin{frame}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Introduction}
+    \begin{itemize}
+        \item Le modèle de Solow, développé par Solow en 1956, est utilisé pour étudier la croissance économique à long terme et les variations de revenu entre les pays.\pause
+        \item \textbf{Implication principale :} 
+        La productivité est \textbf{cruciale} pour la croissance économique soutenue et est 
+        \textbf{plus} significative que l'accumulation de facteurs.\pause
+        \item \textbf{Principaux inconvénients :}
+        \begin{itemize}
+            \item La productivité est considérée comme exogène.
+            \item La consommation est supposée constante.
+            \item Le modèle simplifie excessivement en ignorant des facteurs tels que 
+            le capital humain, le progrès technologique, les imperfections du marché, 
+            la diversité des agents, les rôles gouvernementaux, etc.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Introduction}
+    \begin{itemize}
+        \item Le temps s'écoule de \( t \) (le présent) vers un futur infini.
+        \item Modélise un ménage représentatif et une entreprise représentative.
+        \item Considère un seul bien qui représente tout ce qui est réel dans l'économie.\pause
+        \item \textbf{Fonction de production :} \( Y_t = A_t F(K_t, N_t) \)
+        \begin{itemize}
+            \item \( K_t \) : capital, qui est produit, utilisé pour fabriquer d'autres biens, et ne se déprécie pas complètement.
+            \item \( N_t \) : travail, représentant le temps passé à utiliser les machines pour produire des biens.
+            \item \( Y_t \) : production, que l'on peut considérer comme des unités de nourriture.
+            \item \( A_t \) : productivité (exogène), affecte l'efficacité du capital et du travail.
+        \end{itemize}
+        \pause
+        \item 
+        Conceptualisez la production comme des \enquote{fruits}, le stock de capital comme des \enquote*{arbres fruitiers} 
+        et le travail comme le temps passé à cultiver les arbres.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Fonction de production}
+    \begin{itemize}
+        \item Les deux entrées sont nécessaires : \( F(0, N_t) = F(K_t, 0) = 0 \).
+        \item Augmentation avec les deux entrées : \( F_K(K_t, N_t) > 0 \) et \( F_N(K_t, N_t) > 0 \).
+        \item Concavité dans les deux entrées : \( F_{KK}(K_t, N_t) < 0 \) et \( F_{NN}(K_t, N_t) < 0 \).
+        \item Rendements constants à l'échelle : \( F(qK_t, qN_t) = qF(K_t, N_t) \).
+        \item Le capital et le travail sont payés à leurs produits marginaux :
+        \begin{itemize}
+            \item \( w_t = A_t F_N(K_t, N_t) \) (taux salarial)
+            \item \( R_t = A_t F_K(K_t, N_t) \) (rendement du capital)
+        \end{itemize}
+        (pourquoi ?)\pause
+        \item Fonction de production exemple : Cobb-Douglas :
+        \[ F(K_t, N_t) = K_t^\alpha N_t^{1-\alpha}, \quad 0 < \alpha < 1 \]
+        \item La fonction de production est-elle réaliste ? Non ! \parencite{Banerjee_2005}.
+        Alors pourquoi l'utilisons-nous ?
+        
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Consommation et Investissement}
+    \begin{itemize}
+        \item Les fruits peuvent être consommés (consommation) ou replantés dans le sol (investissement), 
+        ce qui produit ensuite un autre arbre (capital) avec un délai d'un période.
+        \item On suppose qu'une fraction constante de la production, 
+        \( 0 \leq s \leq 1 \), est investie. 
+        Ceci est le "taux d'épargne" ou "taux d'investissement." 
+        (Plus de détails plus tard !)
+        \pause
+        \item \textbf{Contrainte de ressources :} \( Y_t = C_t + I_t \)
+        (\enquote{Fermeture du modèle})\pause
+        \item Équation d'accumulation du capital avec un taux de dépréciation \( 0 < \delta < 1 \) :
+        \[ K_{t+1} = I_t + (1 - \delta)K_t \]
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Équation Centrale et Dynamique}
+    \begin{itemize}
+        \item Équations simplifiées :
+        \begin{align*}
+            Y_t &= A_t F(K_t, N_t) \\
+            C_t &= (1 - s)Y_t \\
+            I_t &= sY_t \\
+            w_t &= A_t F_N(K_t, N_t) \\
+            R_t &= A_t F_K(K_t, N_t)
+        \end{align*}
+        \item Combinez les quatre premières équations en une seule équation dynamique centrale
+        \pause
+        \[ K_{t+1} = sA_t F(K_t, N_t) + (1 - \delta)K_t \]
+        \item Définissez les variables par travailleur : \( k_t = \frac{K_t}{N_t} \)
+        \item Dynamique par travailleur : \( k_{t+1} = sA_t f(k_t) + (1 - \delta)k_t \)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{L'état Stationnaire}
+    \begin{itemize}
+        \item Le stock de capital à l'état stationnaire, \( k^* \), est là où \( k_{t+1} = k_t \).
+        \item Graphiquement, c'est là où la courbe de \( k_{t+1} \) croise la ligne à 45 degrés.
+        \item Sous les hypothèses de la fonction de production et des conditions d'Inada, il existe un stock de capital à l'état stationnaire non nul.
+        \item Stabilité : Pour toute valeur initiale \( k_t \neq 0 \), le stock de capital converge vers ce point.
+        \item Implications : Une fois le capital atteint \( k^* \), toutes les autres variables se stabilisent également à leurs valeurs à l'état stationnaire, régies par \( k^* \).
+        \item Exemple avec Cobb-Douglas : \( f(k_t) = k_t^\alpha \)
+    \end{itemize}
+\end{frame}
+
+
+\end{document}

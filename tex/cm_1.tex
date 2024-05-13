@@ -261,6 +261,27 @@
         \end{equation}
     \end{itemize}
 \end{frame}
+
+\begin{frame}
+    \frametitle{Mesure du marché du travail}
+    \framesubtitle{Compréhension du chômage et des apports de travail}
+
+    \begin{itemize}
+        \item \textbf{Heures totales travaillées :} Définies par \( N = h \times E \), où \( h \) est le nombre moyen d'heures travaillées par personne et \( E \) est le nombre de personnes employées.
+        \pause
+        \item \textbf{Heures par habitant :} \( n = \frac{N}{L} \), qui fournit une mesure des heures totales travaillées par habitant, en prenant en compte à la fois le nombre de travailleurs (\( E \)) et les heures travaillées par chacun (\( h \)), par rapport à la population totale (\( L \)).
+        \pause
+        \item \textbf{Population active :} Composée de ceux qui travaillent (\( E \)) et de ceux qui recherchent activement un emploi (\( U \)), notée \( LF = E + U \).
+        \pause
+        \item \textbf{Taux de participation au marché du travail :} \( lfp = \frac{LF}{L} \), indiquant le rapport de la population active à la population en âge de travailler.
+        \pause
+        \item \textbf{Taux de chômage :} \( u = \frac{U}{LF} \), mesure le pourcentage de la population active qui recherche un emploi mais n'est pas actuellement employée.
+    \end{itemize}
+    \textit{Le taux de chômage est un indicateur clé : plus élevé pendant les récessions, plus bas pendant les expansions.}
+\end{frame}
+
+\section*{Croissance Économique}
+
     
 \begin{frame}
     \frametitle{Kaldor's Stylized Facts}
@@ -300,95 +321,97 @@
         \end{itemize}
 \end{frame}
 
+\section{Modèle de Solow}
 %-------------------------------------------------
 %  First Macro Model: Solow Growth Model
 %-------------------------------------------------
 
 \begin{frame}
-    \frametitle{Solow Model}
+    \frametitle{Modèle de Solow}
     \framesubtitle{Introduction}
     \begin{itemize}
-        \item The Solow Model \parencite{Solow_1956} is used to study long-run economic growth and 
-        variations in income across countries.\pause
-        \item \textbf{Main Implication:} 
-        Productivity is \textbf{crucial} for sustained economic growth and is 
-        \textbf{more} significant than factor accumulation.\pause
-        \item \textbf{Main Drawbacks:}
+        \item Le modèle de Solow, développé par Solow en 1956, est utilisé pour étudier la croissance économique à long terme et les variations de revenu entre les pays.\pause
+        \item \textbf{Implication principale :} 
+        La productivité est \textbf{cruciale} pour la croissance économique soutenue et est 
+        \textbf{plus} significative que l'accumulation de facteurs.\pause
+        \item \textbf{Principaux inconvénients :}
         \begin{itemize}
-            \item Productivity is considered exogenous.
-            \item Consumption is assumed to be constant.
-            \item It oversimplifies by ignoring factors like 
-            human capital, technological progress, market imperfections, 
-            diversity of agents, government roles, etc.
+            \item La productivité est considérée comme exogène.
+            \item La consommation est supposée constante.
+            \item Le modèle simplifie excessivement en ignorant des facteurs tels que 
+            le capital humain, le progrès technologique, les imperfections du marché, 
+            la diversité des agents, les rôles gouvernementaux, etc.
         \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Solow Model}
-    \framesubtitle{Overview}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Introduction}
     \begin{itemize}
-        \item Time runs from \( t \) (the present) onwards into the infinite future.
-        \item Models a representative household and a representative firm.
-        \item Considers a single good which represents everything real in the economy.\pause
-        \item \textbf{Production Function:} \( Y_t = A_t F(K_t, N_t) \)
+        \item Le temps s'écoule de \( t \) (le présent) vers un futur infini.
+        \item Modélise un ménage représentatif et une entreprise représentative.
+        \item Considère un seul bien qui représente tout ce qui est réel dans l'économie.\pause
+        \item \textbf{Fonction de production :} \( Y_t = A_t F(K_t, N_t) \)
         \begin{itemize}
-            \item \( K_t \): capital, which is produced, used to make other goods, and does not completely depreciate.
-            \item \( N_t \): labor, representing time spent using machines to produce goods.
-            \item \( Y_t \): output, which can be thought of as units of food.
-            \item \( A_t \): productivity (exogenous), affects the effectiveness of capital and labor.
+            \item \( K_t \) : capital, qui est produit, utilisé pour fabriquer d'autres biens, et ne se déprécie pas complètement.
+            \item \( N_t \) : travail, représentant le temps passé à utiliser les machines pour produire des biens.
+            \item \( Y_t \) : production, que l'on peut considérer comme des unités de nourriture.
+            \item \( A_t \) : productivité (exogène), affecte l'efficacité du capital et du travail.
         \end{itemize}
         \pause
         \item 
-        Conceptualize output as \enquote{fruit}, capital stock as \enquote*{fruit trees} 
-        and labor as time spent cultivating the trees.
+        Conceptualisez la production comme des \enquote{fruits}, le stock de capital comme des \enquote*{arbres fruitiers} 
+        et le travail comme le temps passé à cultiver les arbres.
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Solow Model}
-    \framesubtitle{Production Function}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Fonction de production}
     \begin{itemize}
-        \item Both inputs are necessary: \( F(0, N_t) = F(K_t, 0) = 0 \).
-        \item Increasing in both inputs: \( F_K(K_t, N_t) > 0 \) and \( F_N(K_t, N_t) > 0 \).
-        \item Concave in both inputs: \( F_{KK}(K_t, N_t) < 0 \) and \( F_{NN}(K_t, N_t) < 0 \).
-        \item Constant returns to scale: \( F(qK_t, qN_t) = qF(K_t, N_t) \).
-        \item Capital and labor are paid their marginal products
+        \item Les deux entrées sont nécessaires : \( F(0, N_t) = F(K_t, 0) = 0 \).
+        \item Augmentation avec les deux entrées : \( F_K(K_t, N_t) > 0 \) et \( F_N(K_t, N_t) > 0 \).
+        \item Concavité dans les deux entrées : \( F_{KK}(K_t, N_t) < 0 \) et \( F_{NN}(K_t, N_t) < 0 \).
+        \item Rendements constants à l'échelle : \( F(qK_t, qN_t) = qF(K_t, N_t) \).
+        \item Le capital et le travail sont payés à leurs produits marginaux :
         \begin{itemize}
-            \item \( w_t = A_t F_N(K_t, N_t) \) (wage rate)
-            \item \( R_t = A_t F_K(K_t, N_t) \) (return on capital)
+            \item \( w_t = A_t F_N(K_t, N_t) \) (taux salarial)
+            \item \( R_t = A_t F_K(K_t, N_t) \) (rendement du capital)
         \end{itemize}
-        (why?)\pause
-        \item Example production function: Cobb-Douglas
+        (pourquoi ?)\pause
+        \item Fonction de production exemple : Cobb-Douglas :
         \[ F(K_t, N_t) = K_t^\alpha N_t^{1-\alpha}, \quad 0 < \alpha < 1 \]
-        \item Is the production function realistic? No! \parencite{Banerjee_2005}.
-        So why do we use it? 
+        \item La fonction de production est-elle réaliste ? Non ! \parencite{Banerjee_2005}.
+        Alors pourquoi l'utilisons-nous ?
         
     \end{itemize}
 \end{frame}
+
 \begin{frame}
-    \frametitle{Solow Model}
-    \framesubtitle{Consumption and Investment}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Consommation et Investissement}
     \begin{itemize}
-        \item Fruit can either be eaten (consumption) or re-planted in the ground (investment), 
-        which then yields another tree (capital) with a one-period delay.
-        \item Assume that a constant fraction of output, 
-        \( 0 \leq s \leq 1 \), is invested. 
-        This is the "saving rate" or "investment rate." 
-        (More on this later!)
+        \item Les fruits peuvent être consommés (consommation) ou replantés dans le sol (investissement), 
+        ce qui produit ensuite un autre arbre (capital) avec un délai d'un période.
+        \item On suppose qu'une fraction constante de la production, 
+        \( 0 \leq s \leq 1 \), est investie. 
+        Ceci est le "taux d'épargne" ou "taux d'investissement." 
+        (Plus de détails plus tard !)
         \pause
-        \item \textbf{Resource Constraint:} \( Y_t = C_t + I_t \)
-        (\enquote{Closing the model})\pause
-        \item Capital accumulation equation with depreciation rate \( 0 < \delta < 1 \):
+        \item \textbf{Contrainte de ressources :} \( Y_t = C_t + I_t \)
+        (\enquote{Fermeture du modèle})\pause
+        \item Équation d'accumulation du capital avec un taux de dépréciation \( 0 < \delta < 1 \) :
         \[ K_{t+1} = I_t + (1 - \delta)K_t \]
     \end{itemize}
 \end{frame}
 
+
 \begin{frame}
-    \frametitle{Solow Model}
-    \framesubtitle{Central Equation and Dynamics}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Équation Centrale et Dynamique}
     \begin{itemize}
-        \item Simplified equations:
+        \item Équations simplifiées :
         \begin{align*}
             Y_t &= A_t F(K_t, N_t) \\
             C_t &= (1 - s)Y_t \\
@@ -396,26 +419,27 @@
             w_t &= A_t F_N(K_t, N_t) \\
             R_t &= A_t F_K(K_t, N_t)
         \end{align*}
-        \item Combine the first four equations into one central dynamic equation
+        \item Combinez les quatre premières équations en une seule équation dynamique centrale
         \pause
         \[ K_{t+1} = sA_t F(K_t, N_t) + (1 - \delta)K_t \]
-        \item Define per worker variables: \( k_t = \frac{K_t}{N_t} \)
-        \item Per-worker dynamics: \( k_{t+1} = sA_t f(k_t) + (1 - \delta)k_t \)
+        \item Définissez les variables par travailleur : \( k_t = \frac{K_t}{N_t} \)
+        \item Dynamique par travailleur : \( k_{t+1} = sA_t f(k_t) + (1 - \delta)k_t \)
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Solow Model}
-    \framesubtitle{The Steady State}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{L'état Stationnaire}
     \begin{itemize}
-        \item The steady state capital stock, \( k^* \), is where \( k_{t+1} = k_t \).
-        \item Graphically, this is where the curve of \( k_{t+1} \) against \( k_t \) crosses the 45-degree line.
-        \item Under the assumptions of the production function and Inada conditions, there exists one non-zero steady state capital stock.
-        \item Stability: For any initial \( k_t \neq 0 \), the capital stock converges to this point.
-        \item Implications: Once capital reaches \( k^* \), all other variables also stabilize to their steady state values, governed by \( k^* \).
-        \item Example with Cobb-Douglas: \( f(k_t) = k_t^\alpha \)
+        \item Le stock de capital à l'état stationnaire, \( k^* \), est là où \( k_{t+1} = k_t \).
+        \item Graphiquement, c'est là où la courbe de \( k_{t+1} \) croise la ligne à 45 degrés.
+        \item Sous les hypothèses de la fonction de production et des conditions d'Inada, il existe un stock de capital à l'état stationnaire non nul.
+        \item Stabilité : Pour toute valeur initiale \( k_t \neq 0 \), le stock de capital converge vers ce point.
+        \item Implications : Une fois le capital atteint \( k^* \), toutes les autres variables se stabilisent également à leurs valeurs à l'état stationnaire, régies par \( k^* \).
+        \item Exemple avec Cobb-Douglas : \( f(k_t) = k_t^\alpha \)
     \end{itemize}
 \end{frame}
+
 
 
 %-------------------------------------------------
