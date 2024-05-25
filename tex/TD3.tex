@@ -1,0 +1,117 @@
+
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{amsmath} % for mathematical features
+\usepackage{enumitem} % for customizing lists
+\title{Introductory Macroeconomics for Engineers}
+\author{Martin A. Valdez}
+\date{IE 1}
+
+\begin{document}
+\maketitle
+\subsection*{Exercice 11}
+Considérez le modèle de Solow que nous avons étudié en classe, en termes de 
+variables par travailleur.
+Les dynamiques du modèle sont données par l'équation d'accumulation du capital :
+\begin{align*}
+    k_{t+1} = sA k^{\alpha}_t + (1 - \delta) k_t
+\end{align*}
+Cela définit le niveau de capital par travailleur à l'instant \( t+1 \) en fonction du
+niveau de capital par travailleur à l'instant \( t \).
+Définir \(h(k_t) = sAk_t^{\alpha} + (1 - \delta)k_t\).
+
+\begin{enumerate}
+    \item Montrez que \(h'(k_t) \to \infty\) lorsque \(k_t \to 0\) par la droite et que \(h'(k_t) \to (1-\delta)\) lorsque \(k_t \to \infty\).
+\end{enumerate}
+
+On dit qu'une fonction \(f(x)\) satisfait les conditions d'Inada si :
+\begin{align*}
+    \lim_{x \to 0} f'(x) = \infty, \quad \lim_{x \to \infty} f'(x) = 0.
+\end{align*}
+
+Nous venons de prouver que \(sAk_t^{\alpha} \) satisfait les conditions d'Inada.
+
+\begin{enumerate}[resume]
+    \item Tracez la courbe \(k_{t+1} = k_t\) sur un graphique avec \(k_t\) sur l'axe horizontal et \(k_{t+1}\) sur
+    l'axe vertical. Quelle est la pente de cette courbe très simple ?
+    \item Tracez la courbe \(k_{t+1} = h(k_t)\) sur le même graphique. Quelle est la pente de cette courbe 
+    lorsque \(k_t \to 0\) par la droite ? Quelle est la pente de cette courbe lorsque \(k_t \to \infty\) ?
+    \item Résolvez pour les points où les deux courbes se croisent. 
+    Que représentent ces points en termes du modèle de Solow ? Lequel est l'état stationnaire non trivial ?
+\end{enumerate}
+
+\subsection*{Exercice 12}
+
+L'état stationnaire, ou l'équilibre, du modèle est caractérisé par les
+équations suivantes :
+
+\begin{align*}
+    k^* &= \left(\frac{sA}{\delta}\right)^{\frac{1}{1-\alpha}}. \\
+    y^* &= Ak^{* \alpha}, \\
+    c^* &= (1 - s)Ak^{* \alpha}, \\
+    i^* &= sAk^{* \alpha}, \\
+    R^* &= \alpha Ak^{* \alpha - 1}, \\
+    w^* &= (1 - \alpha) Ak^{* \alpha}.
+\end{align*}
+
+\begin{enumerate}
+    \item Exprimez les valeurs d'équilibre de \(y^*\), \(R^*\) et \(w^*\) en termes des
+    paramètres du modèle.
+    \item Supposons que l'économie soit initialement à l'état stationnaire, donc \(k_0 = k^*\).
+    Montrez que le taux de croissance de la production et le taux de croissance du capital sont nuls.
+    Indice : Utilisez l'approximation logarithmique des taux de croissance.
+    \item Supposons que l'économie soit initialement à l'état stationnaire, donc \(k_0 = k^*\).
+    Pendant cette période, l'économie subit un choc de la productivité totale des facteurs,  
+    \(A \to A' > A\). 
+    Tracez la nouvelle courbe \(k_{t+1} = h(k_t)\) sur le même graphique que l'exercice précédent,
+    en utilisant une nouvelle couleur. Que se passe-t-il au niveau d'équilibre du capital par travailleur ?
+    Que se passe-t-il aux taux de croissance de la production et du capital par travailleur ?
+    Reviennent-ils à un moment donné à zéro ?
+    \item Supposons que l'économie soit initialement à l'état stationnaire, donc \(k_0 = k^*\).
+    Rappelez-vous que le niveau de consommation à l'état stationnaire est donné par \(c^* = (1 - s)Ak^{* \alpha}\),
+    ce qui peut aussi être écrit \(c^* = (1 - s)y^*\).
+    Utilisez le calcul pour énoncer les conditions pour le niveau d'épargne qui maximise la consommation à l'état stationnaire.
+    Interprétez les conditions - quelles sont les forces concurrentes qui déterminent le niveau optimal d'épargne ?
+\end{enumerate}
+
+\subsection*{Exercice 13}
+Nous ajoutons maintenant le progrès technologique et la croissance démographique au modèle de Solow.
+Supposons que la fonction de production soit donnée par :
+\begin{align*}
+    Y_t =AF(K_t,N_t)= A K_t^{\alpha} (Z_t N_t)^{1-\alpha}
+\end{align*}
+où \(Z_t\) est le progrès technologique augmentant le travail et \(N_t\) est la population. 
+Nous continuons à considérer \(A\) comme une constante.
+Rappelez-vous que le modèle de Solow est donné par les équations suivantes :
+
+\begin{align*}
+    K_{t+1} &= I_t + (1 - \delta)K_t, \\
+    Y_t &= C_t + I_t, \\
+    C_t &= (1 - s)Y_t, \\
+    I_t &= sY_t, \\
+    R_t &= F_K(K_t, N_t), \\
+    w_t &= F_N(K_t, N_t)
+\end{align*}
+
+Supposons que la population croisse à un taux constant \(n\), donc \(N_{t+1} = (1 + n)N_t\),
+et que le progrès technologique croisse à un taux constant \(z\), donc \(Z_{t+1} = (1 + z)Z_t\).
+Définir les variables par travailleur en termes de \textit{travail effectif} :
+\begin{align*}
+    \hat{k}_t   &= \frac{K_t}{Z_tN_t}
+\end{align*}
+
+\begin{enumerate}
+    \item Montrez que \( \hat{y}_t = \frac{Y_t}{Z_tN_t} = A\hat{k_t}^\alpha\)
+    \item Montrez que l'équation d'accumulation du capital peut s'écrire :
+    \[\hat{k}_{t+1} = \frac{1}{(1+z)(1+n)}[sA\hat{k}_t^\alpha + (1 - \delta)\hat{k}_t]\]
+    \item Tracez la courbe \(\hat{k}_{t+1} = \hat{k}_t\) sur un graphique avec \(\hat{k}_t\) sur l'axe horizontal et \(\hat{k}_{t+1}\) sur l'axe vertical,
+    ainsi que la courbe \(\hat{k}_{t+1} = \frac{1}{(1+z)(1+n)}[sA\hat{k}_t^\alpha + (1 - \delta)\hat{k}_t] \) sur le même graphique.
+    \item Quel est le taux de croissance du capital et du capital par travailleur 
+    dans le nouveau modèle ? 
+    Utilisez l'état stationnaire pour trouver ce taux de croissance, ainsi que la définition du taux de croissance.
+    Indice : rappelez-vous que \(\hat{k}_{t+1} = \hat{k}_t\) à l'état stationnaire, 
+    et que \(\frac{K_{t+1}}{K_t} = 1 + g_K\).
+\end{enumerate}
+
+\end{document}

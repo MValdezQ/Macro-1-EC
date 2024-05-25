@@ -148,6 +148,111 @@ defined as the growth rate of productivity.
 \end{enumerate}
 
 
+\subsection*{Exercise 11}
+Consider the Solow model we studied in class, in terms of 
+per-worker variables.
+The model's dynamics are given by the capital accumulation equation:
+\begin{align*}
+    k_{t+1} = sA k^{\alpha}_t + (1 - \delta) k_t
+\end{align*}
+That defines the level of capital per worker at time \( t+1 \) as a function of the
+level of capital per worker at time \( t \).
+Define \(h(k_t) = sAk_t^{\alpha} - (1 - \delta)k_t\).
+
+\begin{enumerate}
+    \item Show that \(h'(k_t) \to \infty\) as \(k_t \to 0\) from the right and \(h'(k_t) \to (1-\delta)\) as \(k_t \to \infty\).
+\end{enumerate}
+
+We say that a function \(f(x)\) satisfies the Inada conditions if:
+\begin{align*}
+    \lim_{x \to 0} f'(x) = \infty, \quad \lim_{x \to \infty} f'(x) = 0.
+\end{align*}
+
+We just proved that \(sAk_t^{\alpha} \) satisfies the Inada conditions.
+
+\begin{enumerate}[resume]
+    \item Graph the curve \(k_{t+1} = k_t\) on a plot with \(k_t\) on the horizontal axis and \(k_{t+1}\) on
+    the vertical axis. What is the slope of this very simple curve?
+    \item Graph the curve \(k_{t+1} = h(k_t)\) on the same plot. What is the slope of this curve 
+    as \(k_t \to 0\) from the right? What is the slope of this curve as \(k_t \to \infty\)?
+    \item Solve for points where the two curves intersect. 
+    What do these points represent in terms of the Solow model? Which one is the 
+    non-trivial steady state?
+\end{enumerate}
+
+\subsection*{Exercise 12}
+
+The steady-state, or the equilibrium, of the model is characterized by the
+the following equations:
+
+\begin{align*}
+    k^* &= \left(\frac{sA}{\delta}\right)^{\frac{1}{1-\alpha}}. \\
+    y^* &= Ak^{* \alpha}, \\
+    c^* &= (1 - s)Ak^{* \alpha}, \\
+    i^* &= sAk^{* \alpha}, \\
+    R^* &= \alpha Ak^{* \alpha - 1}, \\
+    w^* &= (1 - \alpha) Ak^{* \alpha}.
+\end{align*}
+
+\begin{enumerate}
+    \item Express the equilibrium values of \(y^*\), \(R^*\), and \(w^*\) in terms of the
+    parameters of the model.
+    \item Suppose that the economy is initially in a steady state, so that \(k_0 = k^*\).
+    Show that the growth rate of output and the growth rate of capital are zero.
+    Hint: Use the log approximation of growth rates.
+    \item Suppose that the economy is initially in a steady state, so that \(k_0 = k^*\).
+    During this period, the economy experiences a shock to the total factor productivity,  
+    \(A \to A' > A\). 
+    Graph the new curve \(k_{t+1} = h(k_t)\) on the same plot as the previous exercise,
+    in a new color. What happens to the equilibrium level of capital per worker?
+    What happens to the growth rates of output and capital per worker?
+    Do they at some point return to zero?
+    \item Suppose the economy is initially in a steady state, so that \(k_0 = k^*\).
+    Recall that the steady state level of consumption is given by \(c^* = (1 - s)Ak^{* \alpha}\),
+    which can also be written as \(c^* = (1 - s)y^*\).
+    Use calculus to state the conditions for the level of savings that maximizes steady-state consumption.
+    Interpret the conditions - which are the competing forces that determine the optimal level of savings?
+\end{enumerate}
+
+\subsection*{Exercise 13}
+We now add technological progress and population growth to the Solow model.
+Suppose that the production function is given by:
+\begin{align*}
+    Y_t =AF(K_t,N_t)= A K_t^{\alpha} (Z_t N_t)^{1-\alpha}
+\end{align*}
+where \(Z_t\) is labor-augmenting technological progress and \(N_t\) is the population. 
+We continue to consider \(A\) as a constant.
+Recall that the Solow model is given by the following equations:
+
+\begin{align*}
+    K_{t+1} &= I_t + (1 - \delta)K_t, \\
+    Y_t &= C_t + I_t, \\
+    C_t &= (1 - s)Y_t, \\
+    I_t &= sY_t, \\
+    R_t &= F_K(K_t, N_t), \\
+    w_t &= F_N(K_t, N_t)
+\end{align*}
+
+
+Suppose that the population grows at a constant rate \(n\), so that \(N_{t+1} = (1 + n)N_t\),
+and that technological progress grows at a constant rate \(z\), so that \(Z_{t+1} = (1 + z)Z_t\).
+Define the per-worker variables in terms of \textit{effective labor}:
+\begin{align*}
+    \hat{k}_t   &= \frac{K_t}{Z_tN_t}
+\end{align*}
+
+\begin{enumerate}
+    \item Show that \(    \hat{y}_t   = \frac{Y_t}{Z_tN_t}   = A\hat{k_t}^\alpha\)
+    \item Show that the capital accumulation equation can be written as:
+    \[\hat{k}_{t+1} = \frac{1}{(1+z)(1+n)}[sA\hat{k}_t^\alpha + (1 - \delta)\hat{k}_t]\]
+    \item Plot the curve \(\hat{k}_{t+1} = \hat{k}_t\) on a plot with \(\hat{k}_t\) on the horizontal axis and \(\hat{k}_{t+1}\) on the vertical axis,
+    as well as the curve \(\hat{k}_{t+1} \frac{1}{(1+z)(1+n)}[sA\hat{k}_t^\alpha + (1 - \delta)\hat{k}_t] \) on the same plot.
+    \item What is the growth rate of capital and capital per worker 
+    in the new model? 
+    Use the steady state to find this growth rate, as well as the definition of growth rate.
+    Hint: recall that \(\hat{k}_{t+1} = \hat{k}_t\) in the steady state, 
+    and that \(\frac{K_{t+1}}{K_t} = 1 + g_K\).
+\end{enumerate}
 
 
 

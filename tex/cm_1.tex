@@ -325,7 +325,21 @@
             \hyperlink{wages}{\beamergotobutton{Graphique}}
         \end{itemize}
 \end{frame}
-
+\begin{frame}
+    \frametitle{Kaldor's Stylized Facts}
+    \framesubtitle{Liaison entre Empirie et Théorie Économique}
+    \hypertarget{kaldor_summary}{} % Label for hyperlinks
+    Les faits de Kaldor peuvent être résumés comme suit :
+    \begin{itemize}
+        \item  Les salaires, la production par travailleur, et le capital par travailleur 
+        croissent à un taux soutenu similaire, et le rendement du capital reste sensiblement constant.
+        \pause
+        \item Tous les autres faits sont des corollaires à ces observations.
+        \pause
+        \item Nous démontrons que notre modèle de référence de la croissance économique
+        est potentiellement cohérent avec tous ces faits.
+    \end{itemize}
+\end{frame}
 \section{Modèle de Solow}
 %-------------------------------------------------
 %  First Macro Model: Solow Growth Model
@@ -427,7 +441,8 @@
         \item Combinez les quatre premières équations en une seule équation dynamique centrale
         \pause
         \[ K_{t+1} = sA_t F(K_t, N_t) + (1 - \delta)K_t \]
-        \item Définissez les variables par travailleur : \( k_t = \frac{K_t}{N_t} \)
+        \item Supposez que \( A_t = A \) et \( N_t = N \), et
+        définissez les variables par travailleur : \( k_t = \frac{K_t}{N} \)
         \item Dynamique par travailleur : \( k_{t+1} = sA_t f(k_t) + (1 - \delta)k_t \)
     \end{itemize}
 \end{frame}
@@ -445,8 +460,73 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Analyse Graphique de l'État Stationnaire}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.65\textwidth]{graphs/ss_solow.png} % Ensure the image file is in the same directory as your .tex file or provide the relative path
+        \caption{
+        \footnotesize Représentation graphique de la convergence vers 
+        l'état stationnaire \( k^* \) dans le modèle de Solow. 
+        La courbe illustre comment le capital par travailleur \( k_t \) évolue vers 
+        \( k^* \), où la courbe de \( k_{t+1} \) croise la ligne à 45 degrés.
+        \textit{Source:} \textcite{Garin_etal_2021}}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Solutions de l'État Stationnaire}
+    
+    \[
+    k^* = \left(\frac{sA}{\delta}\right)^{\frac{1}{1-\alpha}}.
+    \]
+
+    \vspace*{5pt}
+
+    \pause
+    \vspace*{5pt}
 
 
+    Les valeurs à l'état stationnaire pour d'autres variables sont:
+    
+    \textbf{Production par travailleur:} \( y^* = Ak^{* \alpha} \)
+    
+    \textbf{Consommation par travailleur:} \( c^* = (1 - s)Ak^{* \alpha} \)
+    
+    \textbf{Investissement par travailleur:} \( i^* = sAk^{* \alpha} \)
+    
+    \textbf{Rendement du capital:} \( R^* = \alpha Ak^{* \alpha - 1} \)
+    
+    \textbf{Salaire par travailleur:} \( w^* = (1 - \alpha) Ak^{* \alpha} \)
+\end{frame}
+
+\begin{frame}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Évaluation de l'Impact d'un Taux d'Épargne Plus Élevé}
+    \textbf{Questions:} 
+    \begin{itemize}
+        \item 
+        Comment un taux d'épargne plus élevé
+        ou une augmentation de la productivité  (\( A \))
+         influence-t-il l'accumulation de capital et 
+        la croissance économique à long terme?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Modèle de Solow}
+    \framesubtitle{Analyse Graphique - Taux d'Épargne et Accumulation de Capital}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.65\textwidth]{graphs/ss_solow_s2.png} % Update the path to your actual image file
+        \caption{
+            \footnotesize \textit{Source: }\textcite{Garin_etal_2021}
+        }
+    \end{figure}
+\end{frame}
 %-------------------------------------------------
 %  Graphs
 %-------------------------------------------------
