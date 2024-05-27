@@ -254,6 +254,57 @@ Define the per-worker variables in terms of \textit{effective labor}:
     and that \(\frac{K_{t+1}}{K_t} = 1 + g_K\).
 \end{enumerate}
 
+\subsection*{Exercise 14}
+Let us work through the two-period consumption-savings model we discussed in class.
+In this problem, we have a representative agent who lives for two periods.
+Each period the agent receives an endowment of \(Y_1\) and \(Y_2\), respectively.
+The agent can consume \(C_1\) and \(C_2\) in each period, respectively.
+The agent has the opportunity to save in the first period.
+These savings are invested, which generates a return of \(r\) in the second period.
+The agent is impatient, so the agent discounts future consumption with a discount factor \(\beta \in (0,1)\).
 
+The agent's problem is to maximize the utility function:
+\begin{align*}
+    \max_{ C_1, C_2} U = u(C_1) + \beta u(C_2)
+\end{align*}
+Subject to each period's budget constraint:
+\begin{align*}
+    & C_1 + S = Y_1
+    \\
+    & C_2= Y_2 + (1 + r)S.
+\end{align*}
+
+At the end of the second period, after consuming \(C_2\), the agent dies.
+
+\begin{enumerate}
+    \item Combine the two budget constraints to form a single, \textit{inter-temporal} budget constraint.
+    \item Substitute the inter-temporal budget constraint into the utility function to
+    simplify the problem.
+    \item Calculate the first-order conditions for the problem. This is the \textbf{Euler equation}.
+    \item Suppose that the utility function is given by \(u(C) = \ln(C)\). Substitute this utility function into the Euler equation.
+    \item Use this equation to solve for the optimal level of present consumption, \(C_1\).
+    \item What happens to the optimal level of present consumption if the interest rate increases? Why?
+    \item What happens to the optimal level of present consumption if the agent becomes more impatient 
+    (i.e., \(\beta\) gets smaller)? What if the agent becomes more patient? Why?
+    \item Suppose that the agent's endowment in the first period increases. What happens to the optimal level of present consumption? Why?
+    What happens to the optimal level of future consumption? Why? What happens if the endowment in the second period increases?
+    \item Solve for the optimal level of savings, \(S\). What happens to savings if the interest rate increases? Why?
+\end{enumerate}
+
+Let us now make the link with the Solow model. Suppose that we are in the steady state of the Solow model, so that
+\(c_1 = c_2 = c^*\), and that the economy is in the steady state, so that \(y_1 = y_2 = y^*\).
+
+\begin{enumerate}[resume]
+    \item Show that the Euler equation can be written as:
+    \begin{align*}
+        \frac{1}{c^*} =
+        \beta(1 + r) \frac{1}{c^*} \implies 1 = \beta(1 + r).
+    \end{align*} 
+\end{enumerate}
+
+We call \(\beta\) a \textit{preference parameter}, which describes an \textit{intrinsic} property of the agent's preferences.
+On the other hand, \(r\) can be thought of as an \textit{equilibrium quantity}, which is determined by the market.
+If the previous equation is not satisfied, the agent will adjust their consumption to satisfy it by saving or dis-saving.
 
 \end{document}
+

@@ -527,6 +527,99 @@
         }
     \end{figure}
 \end{frame}
+
+\begin{frame}
+    \frametitle{Taux d'Épargne Optimal \( s \)}
+    \framesubtitle{Règle d'Or pour Maximiser \( c^* \)}
+
+    \textbf{Quelle est la valeur optimale du taux d'épargne \( s \) ?}
+    \begin{itemize}
+        \item L'utilité provient de la consommation, non de la production.
+        \item Un taux d'épargne plus élevé \( s \) :
+            \begin{itemize}
+                \item Augmente le capital \(\rightarrow\) plus de production \(\rightarrow\) plus de consommation
+                \item Réduit la part consommée \(\rightarrow\) moins de consommation
+            \end{itemize}
+        \item \textbf{Règle d'Or :} Maximiser \( c^* = (1-s)y^* \)
+            \begin{itemize}
+                \item \( s = 0 \) et \( s = 1 \) : \( c^* = 0 \)
+            \end{itemize}
+        \item Condition : \(\frac{dc^*}{ds} = -y^* + (1-s)\frac{dy^*}{ds} = 0\)
+        \item Équilibre entre réduire la part consommée et augmenter la production.
+        \item Est-ce une bonne description du comportement de consommation dans le monde réel ?
+    \end{itemize}
+\end{frame}
+
+
+%-------------------------------------------------
+%  Augmented Solow Model
+%-------------------------------------------------
+
+\section{Modèle de Solow Augmenté}
+
+\begin{frame}
+    \frametitle{Modèle de Solow Augmenté}
+    \framesubtitle{Motivation}
+    Le modèle de Solow de base présente un problème majeur :
+
+    Le capital et la production par travailleur n'ont pas de croissance constante.
+    
+    \hyperlink{growth}{Production \beamergotobutton{Graphique}}
+    \hyperlink{capital}{Capital \beamergotobutton{Graphique}}
+    \hyperlink{wages}{Salaires \beamergotobutton{Graphique}}
+    \hyperlink{capital_output_ratio}{Rapport Capital-Production\beamergotobutton{Graphique}}
+    \pause
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Modèle de Solow Augmenté}
+    \framesubtitle{Fonction de Production}
+
+    \begin{itemize}
+        \item Fonction de production :
+        \[
+        Y_t = A_t F(K_t, Z_t N_t)
+        \]
+        \item \( Z_t \) : productivité augmentant le travail
+        \item \( Z_t N_t \) : unités d'efficacité du travail
+        \item Supposons que \( Z_t \) et \( N_t \) croissent avec le temps (valeurs initiales en période 0 normalisées à 1) :
+            \begin{align*}
+                Z_t &= (1 + z)^t \\
+                N_t &= (1 + n)^t
+            \end{align*}
+        \item Pour \( z = n = 0 \) : cas étudié précédemment
+        \item \( Z_t \) n'est pas fondamentalement différent de \( A_t \). Il est mathématiquement pratique d'utiliser \( Z_t \) pour contrôler la croissance tandis que \( A_t \) contrôle le niveau de productivité.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Variables par Capita et par Unité d'Efficacité}
+    \framesubtitle{}
+
+    \begin{itemize}
+        \item Définissons \( \hat{k}_t = \frac{K_t}{Z_t N_t} \) et de manière similaire pour les autres variables.
+        \item Variables en minuscule : par capita.
+        \item Variables en minuscule avec "chapeaux" : par unité d'efficacité.
+        \item On peut montrer que l'équation centrale modifiée du modèle est :
+        \[
+        \hat{k}_{t+1} = \frac{1}{(1 + z)(1 + n)} \left[ s A_t f(\hat{k}_t) + (1 - \delta) \hat{k}_t \right]
+        \]
+        \item Même système qu'avant, mis à l'échelle par une constante \( \frac{1}{(1 + z)(1 + n)} \).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{État Stationnaire Augmenté}
+    \framesubtitle{}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{graphs/ss_solow_s3.png} % Update with the actual path
+        \caption{Graphique de l'État Stationnaire Augmenté}
+    \end{figure}
+\end{frame}
+
 %-------------------------------------------------
 %  Graphs
 %-------------------------------------------------

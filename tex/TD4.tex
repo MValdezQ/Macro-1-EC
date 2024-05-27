@@ -1,0 +1,65 @@
+
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{amsmath} % for mathematical features
+\usepackage{enumitem} % for customizing lists
+\title{Introductory Macroeconomics for Engineers}
+\author{Martin A. Valdez}
+\date{IE 1}
+
+\begin{document}
+\maketitle
+\subsection*{Exercice 14}
+Travaillons sur le modèle de consommation-épargne à deux périodes que nous avons discuté en classe.
+Dans ce problème, nous avons un agent représentatif qui vit pendant deux périodes.
+Chaque période, l'agent reçoit une dotation de \(Y_1\) et \(Y_2\), respectivement.
+L'agent peut consommer \(C_1\) et \(C_2\) à chaque période, respectivement.
+L'agent a la possibilité d'épargner pendant la première période.
+Ces économies sont investies, ce qui génère un rendement de \(r\) pendant la deuxième période.
+L'agent est impatient, donc il actualise la consommation future avec un facteur d'actualisation \(\beta \in (0,1)\).
+
+Le problème de l'agent est de maximiser la fonction d'utilité :
+\begin{align*}
+    \max_{ C_1, C_2} U = u(C_1) + \beta u(C_2)
+\end{align*}
+Sous la contrainte budgétaire de chaque période :
+\begin{align*}
+    & C_1 + S = Y_1
+    \\
+    & C_2 = Y_2 + (1 + r)S.
+\end{align*}
+
+À la fin de la deuxième période, après avoir consommé \(C_2\), l'agent meurt.
+
+\begin{enumerate}
+    \item Combinez les deux contraintes budgétaires pour former une seule contrainte budgétaire \textit{intertemporelle}.
+    \item Remplacez la contrainte budgétaire intertemporelle dans la fonction d'utilité pour simplifier le problème.
+    \item Calculez les conditions de premier ordre pour le problème. Ceci est l'\textbf{équation d'Euler}.
+    \item Supposons que la fonction d'utilité soit donnée par \(u(C) = \ln(C)\). Remplacez cette fonction d'utilité dans l'équation d'Euler.
+    \item Utilisez cette équation pour résoudre le niveau optimal de consommation présente, \(C_1\).
+    \item Que se passe-t-il au niveau optimal de la consommation présente si le taux d'intérêt augmente ? Pourquoi ?
+    \item Que se passe-t-il au niveau optimal de la consommation présente si l'agent devient plus impatient 
+    (c'est-à-dire, \(\beta\) diminue) ? Et s'il devient plus patient ? Pourquoi ?
+    \item Supposons que la dotation de l'agent pendant la première période augmente. Que se passe-t-il au niveau optimal de la consommation présente ? Pourquoi ?
+    Que se passe-t-il au niveau optimal de la consommation future ? Pourquoi ? Que se passe-t-il si la dotation pendant la deuxième période augmente ?
+    \item Résolvez le niveau optimal d'épargne, \(S\). Que se passe-t-il à l'épargne si le taux d'intérêt augmente ? Pourquoi ?
+\end{enumerate}
+
+Faisons maintenant le lien avec le modèle de Solow. Supposons que nous sommes à l'état stationnaire du modèle de Solow, de sorte que
+\(c_1 = c_2 = c^*\), et que l'économie est à l'état stationnaire, de sorte que \(y_1 = y_2 = y^*\).
+
+\begin{enumerate}[resume]
+    \item Montrez que l'équation d'Euler peut être écrite comme :
+    \begin{align*}
+        \frac{1}{c^*} =
+        \beta(1 + r) \frac{1}{c^*} \implies 1 = \beta(1 + r).
+    \end{align*} 
+\end{enumerate}
+
+Nous appelons \(\beta\) un \textit{paramètre de préférence}, qui décrit une propriété \textit{intrinsèque} des préférences de l'agent.
+En revanche, \(r\) peut être considéré comme une \textit{quantité d'équilibre}, qui est déterminée par le marché.
+Si l'équation précédente n'est pas satisfaite, l'agent ajustera sa consommation pour la satisfaire en épargnant ou en désépargnant.
+
+
+\end{document}
