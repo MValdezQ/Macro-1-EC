@@ -1,0 +1,87 @@
+
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{amsmath} % for mathematical features
+\usepackage{enumitem} % for customizing lists
+\usepackage{csquotes}
+\title{Introductory Macroeconomics}
+\author{Martin A. Valdez}
+
+\date{IE 1\\}
+
+\begin{document}
+
+\maketitle
+\textbf{Lisez attentivement l'examen et essayez de répondre à toutes les questions du mieux que vous 
+pouvez. 
+Vous êtes autorisé à utiliser une calculatrice. Bon courage!}
+
+
+\begin{flushleft}
+
+Nom, Prenom:\underline{\hspace{5cm}}\hfil Nr. d'étudiant:\underline{\hspace{4cm}}\\
+Groupe TD:\underline{\hspace{5cm}} \hfill Date:\underline{\hspace{5cm}}
+
+
+\end{flushleft}
+\subsection*{Question 1}
+
+\begin{enumerate}
+    \item Qu'est-ce que la macroéconomie ? (1 pt)
+    \item Pourquoi étudions-nous la macroéconomie ? ( 1 pt)
+    \item Quel est l'intérêt d'utiliser des modèles en macroéconomie ? (1 pt)
+    \item Quelle est la différence entre la macroéconomie et la microéconomie ? (1 pt)
+\end{enumerate}
+
+\subsection*{Question 2}
+\begin{enumerate}
+    \item Quelle est la définition du PIB ? (1 pt)
+    \item Quelles sont les trois approches pour mesurer le PIB ? Fournissez la formule pour chaque approche. (3 pt - 1 par approche)
+    \item Quelle est la différence entre le PIB nominal et le PIB réel ? (1 pt)
+\end{enumerate}
+
+\subsection*{Question 3}
+Mentionnez au moins quatre des faits stylisés de Kaldor. (0,5 pt chacun)
+
+\subsection*{Question 4}
+Supposons que nous sommes dans une économie où le PIB total est produit en utilisant la fonction de production suivante:
+\begin{align*}
+    Y = A F(K,N) = A K^{\alpha} L^{1-\alpha},
+\end{align*}
+Où \(Y\) est le PIB total, \(K\) est le stock total de capital dans l'économie, \(L\) est la force de travail de l'économie, qui est égale à la population (il n'y a pas de chômage dans cette économie), \(A\) est un paramètre de productivité appelé "Productivité Totale des Facteurs", et \(\alpha \in (0,1)\) est un paramètre qui contrôle la part de la production qui va au capital.
+
+\begin{enumerate}
+    \item Montrez que F est une fonction homogène de degré 1, également appelée rendements d'échelle constants, c'est-à-dire que \(F(\lambda K, \lambda L) = \lambda F(K,L)\) pour tout \(\lambda > 0\). (1 pt)
+    \item Calculez les deux dérivées partielles de F, \(F_K = \frac{\partial F }{\partial K} \) et \(F_{L} = \frac{\partial F }{\partial L} \). (1 pt chacune)
+    \item Utilisez une transformation logarithmique pour obtenir une expression du taux de croissance du PIB, \(g_Y\), en termes des taux de croissance du capital, \(g_K\), du travail, \(g_L\), et de la productivité totale des facteurs, \(g_A\). (2 pt)
+    \item Supposons que le PIB (Y) augmente de 10\% de \(t\) à \(t+1\). Le stock de capital passe de 50 à 60 (en termes de sa valeur en euros), et la force de travail passe de 10 à 12 travailleurs. Supposons que \(\alpha = 0.3\) et qu'il n'y a ni inflation ni chômage dans cette économie.
+    \begin{enumerate}
+        \item Calculez le taux de croissance du capital \(g_K\) et du travail \(g_L\) en utilisant la définition du taux de croissance. (1 pt chacun)
+        \item Calculez le taux de croissance de la productivité totale des facteurs \(g_A\) en utilisant l'expression du taux de croissance du PIB \(g_Y\) de la question 3, ainsi que les taux de croissance du capital et du travail que vous venez de calculer. Montrez votre raisonnement (1 pt)
+    \end{enumerate}
+\end{enumerate}
+
+\subsection*{Question 5}
+Recall the Solow model, whose dynamics are given by the following equation:
+\begin{align}
+    K_{t+1} =I_t + (1-\delta)K_t =sY_t + (1-\delta)K_t = sA K_t^{\alpha}L_t^{1-\alpha} + (1-\delta)K_t
+\end{align}
+Where \(K_t\) is the capital stock, \(L_t\) is the labor force, \(s\) is the savings rate, \(\delta\) is the depreciation rate, and \(A\) 
+is total factor productivity.
+
+\begin{enumerate}
+    \item Transform the equation above into a per-worker basis 
+    (for example \(K \to k=\frac{K}{L}\)). (1 pts)
+    \item Graph the per-worker capital stock tomorrow, \(k_{t+1}\), as a function of the per-worker 
+    capital stock today, \(k_t\). (2 pt)
+    \item Show the dynamics of the per-worker capital stock, \(k_{t+1}\) in the graph using the curve 
+    \(k_{t+1} = k_t\). (1 pt)
+    \item Solve for the equilibrium level of capital per worker, \(k^*\). (2 pt)
+    \item What is the growth rate of the per-worker capital stock in the steady state? (1 pt)
+\end{enumerate}
+
+\subsection{ Bonus Question}
+Where does the savings rate parameter, \(s\), come from in the Solow model? (1 pt)
+
+\end{document}
